@@ -11,6 +11,7 @@
    "url": "https://github.com/Mithgol/efgh.git"
 },
 "dependencies": {
-   "extend": "~3.0.0"
+   "extend": "~3.0.0",
+   "underscore.string": "~3.2.2"
 }
 }
