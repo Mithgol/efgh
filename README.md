@@ -20,6 +20,8 @@ You may visit https://github.com/Mithgol/efgh#readme occasionally to read the 
 
 ## Testing EFGH
 
+[![(build testing status)](https://img.shields.io/travis/Mithgol/efgh/master.svg?style=plastic)](https://travis-ci.org/Mithgol/efgh)
+
 It is necessary to install [JSHint](http://jshint.com/) for testing.
 
 * You may install JSHint globally (`npm install jshint -g`) or locally (`npm install jshint` in the directory of EFGH).
