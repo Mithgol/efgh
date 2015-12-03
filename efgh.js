@@ -4,7 +4,8 @@ var defaults = {
    bootstrap: false,
    navigation: false,
    avatarWidth: 140,
-   pixelRatio: 2
+   pixelRatio: 2,
+   unfinished: false
 };
 
 module.exports = (settings) => {

@@ -34,6 +34,8 @@ An object of settings has the following fields:
 
 * `pixelRatio` — the quotient (the result of division) where the dividend is the width of one device independent pixel (CSS pixel) and the divisor is the width of one physical pixel of the display. By default, `2`. You may want to use `window.devicePixelRatio` in a client-side code.
 
+* `unfinished` — by default, `false`. If `true`, the header (HTML5 `<table>`) is not completed and thus the returned string ends with open `tr` and `td` elements; the message's main text can be added after those elements and ended with `</td></tr></table>` to end the table.
+
 ## Testing EFGH
 
 [![(build testing status)](https://img.shields.io/travis/Mithgol/efgh/master.svg?style=plastic)](https://travis-ci.org/Mithgol/efgh)
