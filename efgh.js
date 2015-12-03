@@ -7,6 +7,6 @@ var defaults = {
    pixelRatio: 2
 };
 
-module.exports = (parameters) => {
-   var options = extend({}, defaults, parameters);
+module.exports = (settings) => {
+   var options = extend({}, defaults, settings);
 };
