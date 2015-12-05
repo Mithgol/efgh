@@ -9,5 +9,5 @@ var defaults = {
 };
 
 module.exports = (settings) => {
-   var options = extend({}, defaults, settings);
+   var options = extend(true, {}, defaults, settings);
 };
