@@ -28,7 +28,13 @@ An object of settings has the following fields:
 
 * `bootstrap` — by default, `false`. If set to `true`, [Bootstrap](http://getbootstrap.com/) classes are assigned to the header's elements.
 
-* `navigation` — by default, `false`. It means that the header won't have elements providing navigation between individual Fidonet echomail messages.
+* `navigation` — by default, `false`. It means that the header won't have elements providing navigation between individual Fidonet echomail messages. If this default value is changed, `navigation` is expected to be an object with the following optional properties:
+   * `number` — the current message's number, 1-based. If this property is omitted, `total` is not displayed as well.
+   * `total` — the last message's number, 1-based.
+   * `first` — the first message's URL, to be used in the code of the corresponding navigational button. If this property is omitted, the button is grayed out. If all such buttons are to be grayed out, they are not displayed at all.
+   * `prev` — the previous message's URL, to be used in the code of the corresponding navigational button. If this property is omitted, the button is grayed out. If all such buttons are to be grayed out, they are not displayed at all.
+   * `next` — the next message's URL, to be used in the code of the corresponding navigational button. If this property is omitted, the button is grayed out. If all such buttons are to be grayed out, they are not displayed at all.
+   * `last` — the last message's URL, to be used in the code of the corresponding navigational button. If this property is omitted, the button is grayed out. If all such buttons are to be grayed out, they are not displayed at all.
 
 * `avatarWidth` — width (in CSS pixels) of an avatar of the message's author (or of a default avatar). By default, `140`.
 
