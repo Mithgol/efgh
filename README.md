@@ -40,6 +40,16 @@ An object of settings has the following fields:
 
 * `pixelRatio` — the quotient (the result of division) where the dividend is the width of one device independent pixel (CSS pixel) and the divisor is the width of one physical pixel of the display. By default, `2`. You may want to use `window.devicePixelRatio` in a client-side code.
 
+* `from` — the sender's name.
+
+* `origAddr` — the sender's address.
+
+* `origTime` — the time when the message was written. Either a string or an array of year, month, day, hour, minute, second.
+
+* `procTime` — the time when the message was processed by an echoprocessor. Either a string or an array of year, month, day, hour, minute, second.
+
+* `subj` — the message's subject line.
+
 * `unfinished` — by default, `false`. If `true`, the header (HTML5 `<table>`) is not completed and thus the returned string ends with open `tr` and `td` elements; the message's main text can be added after those elements and ended with `</td></tr></table>` to end the table.
 
 ## Testing EFGH
