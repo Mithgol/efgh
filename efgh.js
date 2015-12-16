@@ -16,4 +16,10 @@ module.exports = (settings) => {
       typeof options.navigation.next !== 'undefined' ||
       typeof options.navigation.last !== 'undefined'
    );
+   var XofN = null;
+   if( typeof options.navigation.number !== 'undefined' ){
+      if( typeof options.navigation.total !== 'undefined' ){
+         XofN = `${options.navigation.number} of ${options.navigation.total}`;
+      } else XofN = `${options.navigation.number}`;
+   }
 };
