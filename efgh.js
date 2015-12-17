@@ -22,4 +22,5 @@ module.exports = (settings) => {
          XofN = `${options.navigation.number} of ${options.navigation.total}`;
       } else XofN = `${options.navigation.number}`;
    }
+   var avatarRealWidth = options.avatarWidth * options.pixelRatio;
 };
