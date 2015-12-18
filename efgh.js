@@ -23,4 +23,10 @@ module.exports = (settings) => {
       } else XofN = `${options.navigation.number}`;
    }
    var avatarRealWidth = options.avatarWidth * options.pixelRatio;
+
+   // Rows:
+   // 1) message XXX of YYY, navigation, relations
+   // 2) from (with an address and a city), time
+   // 3) to, time
+   // 4) subject
 };
