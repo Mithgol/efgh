@@ -3,6 +3,7 @@ var extend = require('extend');
 var defaults = {
    bootstrap: false,
    navigation: false,
+   nodelist: false,
    avatarWidth: 140,
    pixelRatio: 2,
    unfinished: false

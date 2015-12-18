@@ -36,6 +36,8 @@ An object of settings has the following fields:
    * `next` — the next message's URL, to be used in the code of the corresponding navigational button. If this property is omitted, the button is grayed out. If all such buttons are to be grayed out, they are not displayed at all.
    * `last` — the last message's URL, to be used in the code of the corresponding navigational button. If this property is omitted, the button is grayed out. If all such buttons are to be grayed out, they are not displayed at all.
 
+* `nodelist` — by default, `false`. It may also contain an object constructed by the constructor returned from the [Fidonet nodelist](https://github.com/Mithgol/node-fidonet-nodelist) module. In the latter case, the Fidonet nodelist is used to determine the physical location (town, suburb, city, etc.) of the message's sender (using the Fidonet address); that location is displayed in the header.
+
 * `avatarWidth` — width (in CSS pixels) of an avatar of the message's author (or of a default avatar). By default, `140`.
 
 * `pixelRatio` — the quotient (the result of division) where the dividend is the width of one device independent pixel (CSS pixel) and the divisor is the width of one physical pixel of the display. By default, `2`. You may want to use `window.devicePixelRatio` in a client-side code.
