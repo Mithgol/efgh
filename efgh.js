@@ -1,5 +1,7 @@
 var extend = require('extend');
 
+var pad = require('underscore.string/pad');
+
 var defaults = {
    bootstrap: false,
    navigation: false,
@@ -8,6 +10,16 @@ var defaults = {
    pixelRatio: 2,
    unfinished: false
 };
+
+var dtArrayToString = dtArray => [
+   dtArray[0], '-',
+   pad(dtArray[1], 2, '0'), '-',
+   pad(dtArray[2], 2, '0'),
+   ' ',
+   pad(dtArray[3], 2, '0'), ':',
+   pad(dtArray[4], 2, '0'), ':',
+   pad(dtArray[5], 2, '0')
+].join('');
 
 module.exports = (settings) => {
    var options = extend(true, {}, defaults, settings);
@@ -24,6 +36,13 @@ module.exports = (settings) => {
       } else XofN = `${options.navigation.number}`;
    }
    var avatarRealWidth = options.avatarWidth * options.pixelRatio;
+
+   if( Array.isArray(options.origTime) ){
+      options.origTime = dtArrayToString(options.origTime);
+   }
+   if( Array.isArray(options.procTime) ){
+      options.procTime = dtArrayToString(options.procTime);
+   }
 
    // Rows:
    // 1) message XXX of YYY, navigation, relations
