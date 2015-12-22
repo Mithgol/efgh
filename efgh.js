@@ -35,7 +35,10 @@ module.exports = (settings) => {
          XofN = `${options.navigation.number} of ${options.navigation.total}`;
       } else XofN = `${options.navigation.number}`;
    }
-   var avatarRealWidth = options.avatarWidth * options.pixelRatio;
+   var avatarRealWidth = ((width, ratio) => {
+      /* jshint bitwise: false */
+      return (width * ratio) |0;
+   })(options.avatarWidth, options.pixelRatio);
 
    if( Array.isArray(options.origTime) ){
       options.origTime = dtArrayToString(options.origTime);
