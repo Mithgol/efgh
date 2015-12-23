@@ -49,4 +49,5 @@ module.exports = (settings) => {
    // 2) from (with an address and a city), time
    // 3) to, time
    // 4) subject
+   var rowCount = 4;
 };
