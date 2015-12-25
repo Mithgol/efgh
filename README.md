@@ -35,6 +35,8 @@ An object of settings has the following fields:
    * `prev` — the previous message's URL, to be used in the code of the corresponding navigational button. If this property is omitted, the button is grayed out. If all such buttons are to be grayed out, they are not displayed at all.
    * `next` — the next message's URL, to be used in the code of the corresponding navigational button. If this property is omitted, the button is grayed out. If all such buttons are to be grayed out, they are not displayed at all.
    * `last` — the last message's URL, to be used in the code of the corresponding navigational button. If this property is omitted, the button is grayed out. If all such buttons are to be grayed out, they are not displayed at all.
+   * `parent.num` and `parent.URL` — the number and the URL of the parent message, to which the current message is a reply.
+   * `replies` — an array of replies to the current message. (Each element of that array is expected to be an object with the properties `.num` and `.URL` for the number and the URL of the reply.)
 
 * `nodelist` — by default, `false`. It may also contain an object constructed by the constructor returned from the [Fidonet nodelist](https://github.com/Mithgol/node-fidonet-nodelist) module. In the latter case, the Fidonet nodelist is used to determine the physical location (town, suburb, city, etc.) of the message's sender (using the Fidonet address); that location is displayed in the header.
 
