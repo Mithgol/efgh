@@ -4,7 +4,7 @@
 
 This module (`efgh`) is a generator of HTML5 representations of headers for Fidonet echomail messages.
 
-This module is written in JavaScript and requires [Node.js](http://nodejs.org/) to run. It is tested against Node.js v4.x and the latest stable Node.js version.
+This module is written in JavaScript and requires [Node.js](http://nodejs.org/) to run. Because it uses ECMAScript 2015 features, a relatively recent Node.js is required. The module is tested against Node.js v4.x and the latest stable Node.js version.
 
 This module is currently in an early phase of its development and thus does not have the desired level of feature completeness.
 
