@@ -1,10 +1,10 @@
 [![(a histogram of downloads)](https://nodei.co/npm-dl/efgh.png?height=3)](https://npmjs.org/package/efgh)
 
-## Echomail in Fidonet: generator of headers.
+## Echomail of Fidonet: generator of headers
 
 This module (`efgh`) is a generator of HTML5 representations of headers for Fidonet echomail messages.
 
-This module is written in JavaScript and requires [Node.js](http://nodejs.org/) to run. Because it uses ECMAScript 2015 features, a relatively recent Node.js is required. The module is tested against Node.js v4.x and the latest stable Node.js version.
+This module is written in JavaScript and requires [Node.js](http://nodejs.org/) to run. It uses some ECMAScript 2015 features, and thus a relatively recent Node.js is required. The module is tested against Node.js v4.x and the latest stable Node.js version.
 
 This module is currently in an early phase of its development and thus does not have the desired level of feature completeness.
 
@@ -20,7 +20,15 @@ You may visit https://github.com/Mithgol/efgh#readme occasionally to read the 
 
 ## Using EFGH
 
-When you `require()` the installed module, you get a function that accepts an object of settings and returns (synchronously) the corresponding HTML5 representation of a header for a Fidonet echomail message.
+When you `require()` the installed module, an object is returned.
+
+That object's `sync` property represents the synchronous interface. An asynchronous interface is planned, but not (yet) implemented.
+
+### The synchronous interface
+
+When you `require()` the installed module, an object is returned. Its `sync` property represents the synchronous interface.
+
+That property is a function that accepts an object of settings and returns (synchronously) the corresponding HTML5 representation of a header for a Fidonet echomail message.
 
 The header is returned as a JavaScript string.
 

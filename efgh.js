@@ -21,7 +21,7 @@ var dtArrayToString = dtArray => [
    pad(dtArray[5], 2, '0')
 ].join('');
 
-module.exports = (settings) => {
+var TheSynchronousInterface = settings => {
    var options = extend(true, {}, defaults, settings);
    var hasNavButtons = (
       typeof options.navigation.first !== 'undefined' ||
@@ -50,4 +50,8 @@ module.exports = (settings) => {
    // 3) to, time
    // 4) subject
    var rowCount = 4;
+};
+
+module.exports = {
+   sync: TheSynchronousInterface
 };
