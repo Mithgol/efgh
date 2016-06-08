@@ -8,7 +8,7 @@ var defaults = {
    nodelist: false,
    avatarWidth: 140,
    pixelRatio: 2,
-   unfinished: false
+   messageHTML: false
 };
 
 var dtArrayToString = dtArray => [
