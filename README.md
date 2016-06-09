@@ -62,6 +62,8 @@ An object of settings has the following fields:
 
 * `subj` — the message's subject line.
 
+* `url` — [FGHI URL](https://github.com/Mithgol/FGHI-URL/) of the message.
+
 * `messageHTML` — by default, `false`.
    * If `messageHTML === true`, the header (HTML5 `<table>`) is not completed and thus the returned string ends with open `tr` and `td` elements; the message's main text (in HTML) can be added after those elements and ended with `</td></tr></table>` to end the table.
    * Also `messageHTML` can be a JavaScript string containing the message's main text (in HTML). In such case the returned string contains the whole message (not only the header as an HTML table, but also the main text in the last row of the same HTML table).
