@@ -45,11 +45,12 @@ var TheSynchronousInterface = settings => {
    }
 
    // Rows:
-   // 1) message XXX of YYY, navigation, relations
-   // 2) from (with an address and a city), time
-   // 3) to, time
-   // 4) subject
-   var rowCount = 4;
+   // 1) FGHI URL
+   // 2) message XXX of YYY, navigation, relations
+   // 3) from (with an address and a city), time
+   // 4) to, time
+   // 5) subject
+   var rowCount = 5;
 };
 
 module.exports = {
