@@ -52,6 +52,16 @@ var TheSynchronousInterface = settings => {
    // 5) subject
    var rowCount = 5;
    if( typeof options.URL === 'undefined' ) rowCount--;
+   if(
+      !hasNavButtons && XofN === null && (
+         typeof options.navigation.parent.num === 'undefined' ||
+         typeof options.navigation.parent.URL === 'undefined'
+      ) && (
+         !Array.isArray(options.navigation.replies) ||
+         options.navigation.replies.length === 0
+      )
+   ) rowCount--;
+
 };
 
 module.exports = {
