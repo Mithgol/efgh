@@ -30,11 +30,11 @@ When you `require()` the installed module, an object is returned. Its `sync` 
 
 That property is a function that accepts an object of settings and returns (synchronously) the corresponding HTML5 representation of a header for a Fidonet echomail message.
 
+[Bootstrap](http://getbootstrap.com/) classes are assigned to the header's elements.
+
 The header is returned as a JavaScript string.
 
 An object of settings has the following fields:
-
-* `bootstrap` — by default, `false`. If set to `true`, [Bootstrap](http://getbootstrap.com/) classes are assigned to the header's elements.
 
 * `navigation` — by default, `false`. It means that the header won't have elements providing navigation between individual Fidonet echomail messages. If this default value is changed, `navigation` is expected to be an object with the following optional properties:
    * `number` — the current message's number, 1-based. If this property is omitted, `total` is not displayed as well.

@@ -3,7 +3,6 @@ var extend = require('extend');
 var pad = require('underscore.string/pad');
 
 var defaults = {
-   bootstrap: false,
    navigation: false,
    nodelist: false,
    avatarWidth: 140,
