@@ -64,8 +64,8 @@ var TheSynchronousInterface = settings => {
    return [
       '<table class="table table-bordered table-condensed">',
       '<tr>',
-         '<th rowspan=4 class="avatar inverse" width=1>',
-            '<div style="width: '+defaultAvatarSize+'px;">',
+         '<th rowspan=' + rowCount + ' class="avatar inverse" width=1>',
+            '<div style="width: ' + options.avatarWidth + 'px;">',
                '&nbsp;',
             '</div>',
          '</th>',
