@@ -6,7 +6,6 @@ var defaults = {
    navigation: false,
    nodelist: false,
    avatarWidth: 140,
-   pixelRatio: 2,
    messageHTML: false
 };
 
@@ -34,7 +33,6 @@ var TheSynchronousInterface = settings => {
          XofN = `${options.navigation.number} of ${options.navigation.total}`;
       } else XofN = `${options.navigation.number}`;
    }
-   var avatarRealWidth = Math.trunc(options.avatarWidth * options.pixelRatio);
 
    if( Array.isArray(options.origTime) ){
       options.origTime = dtArrayToString(options.origTime);
