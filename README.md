@@ -50,6 +50,8 @@ An object of settings has the following fields:
 
 * `avatarWidth` — width (in CSS pixels) of an avatar of the message's author (or of a default avatar). By default, `140`. This value does not have to be equal to the avatar's width in physical pixels (for example, where `window.devicePixelRatio != 1` in your client-side code).
 
+* `avatarURL` — URL of the avatar (i.e. of the picture).
+
 * `from` — the sender's name.
 
 * `origAddr` — the sender's address.
