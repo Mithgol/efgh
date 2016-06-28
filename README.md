@@ -56,6 +56,8 @@ An object of settings has the following fields:
 
 * `origAddr` — the sender's address.
 
+* `to` — the recipient's name.
+
 * `origTime` — the time when the message was written. Either a string or an array of year, month, day, hour, minute, second.
 
 * `procTime` — the time when the message was processed by an echoprocessor. Either a string or an array of year, month, day, hour, minute, second.

@@ -12,6 +12,7 @@
 },
 "dependencies": {
    "extend": "~3.0.0",
+   "lodash.escape": "~4.0.0",
    "underscore.string": "~3.3.4"
 },
 "scripts": {
