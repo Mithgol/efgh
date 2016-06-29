@@ -68,6 +68,12 @@ var TheSynchronousInterface = settings => {
                '&nbsp;',
             '</div>',
          '</th>',
+         ( typeof options.URL === 'undefined' ) ? '' : [
+            '<tr>',
+               '<th class="inverse" nowrap>FGHI URL</th>',
+               '<td colspan=3>' +  escapeHTML(options.URL) + '</td>',
+            '</tr>'
+         ].join(''),
          '<th class="inverse">Msg</th>',
          '<td colspan=3>',
             '<div class="messageNavigation">',
