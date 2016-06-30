@@ -59,7 +59,9 @@ var TheSynchronousInterface = settings => {
          options.navigation.replies.length === 0
       )
    ) rowCount--;
-   
+
+   var escapedURL = escapeHTML(options.URL);
+
    return [
       '<table class="table table-bordered table-condensed">',
       '<tr>',
@@ -71,7 +73,9 @@ var TheSynchronousInterface = settings => {
          ( typeof options.URL === 'undefined' ) ? '' : [
             '<tr>',
                '<th class="inverse" nowrap>FGHI URL</th>',
-               '<td colspan=3>' +  escapeHTML(options.URL) + '</td>',
+               '<td colspan=3>',
+                  `<a href="${escapedURL}">${escapedURL}</a>`,
+               '</td>',
             '</tr>'
          ].join(''),
          '<th class="inverse">Msg</th>',
