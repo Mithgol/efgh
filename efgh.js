@@ -131,14 +131,12 @@ var TheSynchronousInterface = settings => {
          '<th class="inverse">Subj</th>',
          '<td colspan=3>' + escapeHTML(options.subj) + '</td>',
       '</tr>',
-      '<tr>',
-         '<td colspan=5 class="messageText">',
-            '<p style="text-align: center;">',
-               '<i class="fa fa-spinner fa-spin"></i>',
-            '</p>',
-         '</td>',
-      '</tr>',
-      '</table>'
+      ( options.messageHTML === false ) ? '</table>' : [
+         '<tr><td colspan=5 class="messageText">',
+         ( options.messageHTML === true ) ? '' : (
+            `${ options.messageHTML }</td></tr></table>`
+         )
+      ].join('')
    ].join('');
 
 };
