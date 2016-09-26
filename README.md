@@ -66,9 +66,9 @@ An object of settings has the following fields:
 
 * `URL` — [FGHI URL](https://github.com/Mithgol/FGHI-URL/) of the message.
 
-* `messageHTML` — by default, `false`.
-   * If `messageHTML === true`, the header (HTML5 `<table>`) is not completed and thus the returned string ends with open `tr` and `td` elements; the message's main text (in HTML) can be added after those elements and ended with `</td></tr></table>` to end the table.
-   * Also `messageHTML` can be a JavaScript string containing the message's main text (in HTML). In such case the returned string contains the whole message (not only the header as an HTML table, but also the main text in the last row of the same HTML table).
+* `messageHTML` — by default, `false`. It means that the HTML5 `table` is closed by its closing tag (`</table>`).
+   * If `messageHTML === true`, the header (HTML5 `<table>`) is not completed and thus the returned string ends with open `tr` and `td` elements; the message's main text (in HTML) can be added after those elements and ended with `</td></tr></table>` to end the table. The `td` element is given the class `messageText`.
+   * Also `messageHTML` can be a JavaScript string containing the message's main text (in HTML). In such case the string returned from `.sync()` contains the whole message (not only the header as an HTML table, but also the main text in the last row of the same HTML table).
 
 ## Testing EFGH
 
