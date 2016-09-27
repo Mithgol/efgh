@@ -36,16 +36,6 @@ The header is returned as a JavaScript string.
 
 An object of settings has the following fields:
 
-* ![(TODO: not ready)](https://img.shields.io/badge/TODO-%28not_ready%29-001f3f.svg?style=plastic) `navigation` — by default, `false`. It means that the header won't have elements providing navigation between individual Fidonet echomail messages. If this default value is changed, `navigation` is expected to be an object with the following optional properties:
-   * `number` — the current message's number, 1-based. If this property is omitted, `total` is not displayed as well.
-   * `total` — the last message's number, 1-based.
-   * `first` — the first message's URL, to be used in the code of the corresponding navigational button. If this property is omitted, the button is grayed out. If all such buttons are to be grayed out, they are not displayed at all.
-   * `prev` — the previous message's URL, to be used in the code of the corresponding navigational button. If this property is omitted, the button is grayed out. If all such buttons are to be grayed out, they are not displayed at all.
-   * `next` — the next message's URL, to be used in the code of the corresponding navigational button. If this property is omitted, the button is grayed out. If all such buttons are to be grayed out, they are not displayed at all.
-   * `last` — the last message's URL, to be used in the code of the corresponding navigational button. If this property is omitted, the button is grayed out. If all such buttons are to be grayed out, they are not displayed at all.
-   * `parent.num` and `parent.URL` — the number and the URL of the parent message, to which the current message is a reply.
-   * `replies` — an array of replies to the current message. (Each element of that array is expected to be an object with the properties `.num` and `.URL` for the number and the URL of the reply.)
-
 * ![(TODO: not ready)](https://img.shields.io/badge/TODO-%28not_ready%29-001f3f.svg?style=plastic) `nodelist` — by default, `false`. It may also contain an object constructed by the constructor returned from the [Fidonet nodelist](https://github.com/Mithgol/node-fidonet-nodelist) module. In the latter case, the Fidonet nodelist is used to determine the physical location (town, suburb, city, etc.) of the message's sender (using the Fidonet address); that location is displayed in the header.
 
 * `avatarWidth` — width (in CSS pixels) of an avatar of the message's author (or of a default avatar). By default, `140`. This value does not have to be equal to the avatar's width in physical pixels (for example, where `window.devicePixelRatio != 1` in your client-side code).
