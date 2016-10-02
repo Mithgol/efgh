@@ -1,0 +1,17 @@
+tr.inverse > td,
+tr.inverse > th,
+.table-hover > tbody > tr.inverse:hover > td,
+.table-hover > tbody > tr.inverse:hover > th,
+tr > td.inverse,
+tr > th.inverse,
+.table-hover > tbody > tr:hover > td.inverse,
+.table-hover > tbody > tr:hover > th.inverse {
+   background-color: #555; color: #fff; text-shadow: 1px 1px #000;
+}
+.avatar {
+   background-size:     contain;
+   background-repeat:   no-repeat;
+   background-position: center center;
+   padding: 0;
+}
+.avatar div { margin: 0; padding: 0; border: 0; }
