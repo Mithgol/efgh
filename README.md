@@ -30,8 +30,6 @@ When you `require()` the installed module, an object is returned. Its `sync` 
 
 That property is a function that accepts an object of settings and returns (synchronously) the corresponding HTML5 representation of a header for a Fidonet echomail message.
 
-[Bootstrap](http://getbootstrap.com/) classes are assigned to the header's elements.
-
 The header is returned as a JavaScript string.
 
 An object of settings has the following fields:
@@ -59,6 +57,20 @@ An object of settings has the following fields:
 * `messageHTML` — by default, `false`. It means that the HTML5 `table` is closed by its closing tag (`</table>`).
    * If `messageHTML === true`, the header (HTML5 `<table>`) is not completed and thus the returned string ends with open `tr` and `td` elements; the message's main text (in HTML) can be added after those elements and ended with `</td></tr></table>` to end the table. The `td` element is given the class `messageText`.
    * Also `messageHTML` can be a JavaScript string containing the message's main text (in HTML). In such case the string returned from `.sync()` contains the whole message (not only the header as an HTML table, but also the main text in the last row of the same HTML table).
+
+## CSS rules
+
+Three [Bootstrap](http://getbootstrap.com/) classes ('table', 'table-bordered', 'table-condensed') are assigned to the header's table.
+
+Two additional classes are used for EFGH purposes:
+
+* `inverse` — this class is assigned to individual headers (`From`, `To`, `Subj`, `FGHI URL`) and provides an inverted look (white text on dark background)
+
+* `avatar` — this class is assigned to the `TH` element of the avatar (user's picture) and ensures its proper display (for example, `background-size: contain`).
+
+CSS rules for these two EFGH classes are provided in the file `efgh.css`. Users of EFGH are expected to reference that file or include it in their CSS.
+
+HTML5 headers generated by EFGH may not be displayed properly if HTML5 representation is provided without the corresponding CSS rules (for example, in `description` elements of RSS items).
 
 ## Testing EFGH
 
