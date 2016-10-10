@@ -16,6 +16,7 @@
    "underscore.string": "~3.3.4"
 },
 "scripts": {
-   "test": "jshint --verbose efgh.js"
+   "pretest": "jshint --verbose efgh.js test/",
+   "test": "mocha --reporter spec"
 }
 }
