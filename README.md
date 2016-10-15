@@ -82,7 +82,7 @@ It is necessary to install [Mocha](http://visionmedia.github.io/mocha/) and [JSH
 
 * You may install JSHint globally (`npm install jshint -g`) or locally (`npm install jshint` in the directory of EFGH).
 
-After that you may run `npm test` (in the directory of EFGH). Only the JS code errors are caught; the code's behaviour is not tested.
+After that you may run `npm test` (in the directory of EFGH).
 
 ## License
 
