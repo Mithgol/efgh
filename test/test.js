@@ -21,6 +21,10 @@ describe(
       var settings = JSON.parse(fs.readFileSync(
          path.join(__dirname, nextTestSet.source), { encoding: 'utf8' }
       ));
+      if( nextTestSet.URL ) settings.URL = nextTestSet.URL;
+      if( nextTestSet.message ) settings.messageHTML = fs.readFileSync(
+         path.join(__dirname, nextTestSet.message), { encoding: 'utf8' }
+      ).replace(/\r/g, ''); // CRLF → LF
       var expectedResult = fs.readFileSync(
          path.join(__dirname, nextTestSet.result), { encoding: 'utf8' }
       ).replace(/\r/g, ''); // CRLF → LF
