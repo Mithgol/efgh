@@ -16,6 +16,13 @@ describe(
          source: 'openForMessage.json',
          result: 'openForMessage.html',
          title: 'also a header without `URL` and with `messageHTML === true`'
+      },
+      {
+         source: 'msgMatrix.json',
+         result: 'msgMatrix.html',
+         title: "FGHI URL and message's content are also included",
+         URL: 'area://Ru.Blog.Mithgol?msgid=2:50/88+5731ecd5',
+         message: 'msgMatrix.txt'
       }
    ].forEach(nextTestSet => it(nextTestSet.title, () => {
       var settings = JSON.parse(fs.readFileSync(
