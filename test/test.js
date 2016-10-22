@@ -2,7 +2,8 @@
 var assert = require('assert');
 var fs = require('fs');
 var path = require('path');
-var syncEFGH = require('../').sync;
+var EFGH = require('../');
+var syncEFGH = EFGH.sync;
 
 describe(
    'EFGH synchronous interface',
@@ -38,3 +39,9 @@ describe(
       assert.strictEqual( syncEFGH(settings), expectedResult );
    }))
 );
+
+describe('CSS path interface', () => {
+   it('the returned path ends with `efgh.css`', () => assert.ok(
+      EFGH.pathCSS().endsWith('efgh.css')
+   ));
+});

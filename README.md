@@ -70,6 +70,8 @@ Two additional classes are used for EFGH purposes:
 
 CSS rules for these two EFGH classes are provided in the file `efgh.css`. Users of EFGH are expected to reference that file or include it in their CSS.
 
+* To facilitate such references, `require('efgh').pathCSS()` returns `path.join(__dirname, 'efgh.css')` (in other words, the full path to the `efgh.css` file).
+
 HTML5 headers generated by EFGH may not be displayed properly if HTML5 representation is provided without the corresponding CSS rules (for example, in `description` elements of RSS items).
 
 ## Testing EFGH

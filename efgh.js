@@ -1,3 +1,4 @@
+var path = require('path');
 var escapeHTML = require('lodash.escape');
 var extend = require('extend');
 
@@ -84,5 +85,6 @@ var TheSynchronousInterface = settings => {
 };
 
 module.exports = {
-   sync: TheSynchronousInterface
+   sync: TheSynchronousInterface,
+   pathCSS: () => path.join(__dirname, 'efgh.css')
 };
