@@ -86,5 +86,5 @@ var TheSynchronousInterface = settings => {
 
 module.exports = {
    sync: TheSynchronousInterface,
-   pathCSS: () => path.join(__dirname, 'efgh.css')
+   pathCSS: () => path.join(__dirname, 'styles', 'efgh.css')
 };

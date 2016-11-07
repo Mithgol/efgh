@@ -30,7 +30,7 @@ When you `require()` the installed module, an object is returned. Its `sync` 
 
 That property is a function that accepts an object of settings and returns (synchronously) the corresponding HTML5 representation of a header for a Fidonet echomail message.
 
-The header is returned as a JavaScript string.
+That header is returned as a JavaScript string.
 
 An object of settings has the following fields:
 
@@ -68,9 +68,9 @@ Two additional classes are used for EFGH purposes:
 
 * `avatar` — this class is assigned to the `TH` element of the avatar (user's picture) and ensures its proper display (for example, `background-size: contain`).
 
-CSS rules for these two EFGH classes are provided in the file `efgh.css`. Users of EFGH are expected to reference that file or include it in their CSS.
+CSS rules for these two EFGH classes are provided in the file `styles/efgh.css`. Users of EFGH are expected to reference that file or include it in their CSS.
 
-* To facilitate such references, `require('efgh').pathCSS()` returns `path.join(__dirname, 'efgh.css')` (in other words, the full path to the `efgh.css` file).
+* To facilitate such references, `require('efgh').pathCSS()` returns `path.join(__dirname, 'styles', 'efgh.css')` (in other words, the full path to the `efgh.css` file).
 
 HTML5 headers generated by EFGH may not be displayed properly if HTML5 representation is provided without the corresponding CSS rules (for example, in `description` elements of RSS items).
 
