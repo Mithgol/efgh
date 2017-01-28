@@ -24,6 +24,13 @@ describe(
          title: "FGHI URL and message's content are also included",
          URL: 'area://Ru.Blog.Mithgol?msgid=2:50/88+5731ecd5',
          message: 'msgMatrix.txt'
+      },
+      {
+         source: 'msgMatrixIndependent.json',
+         result: 'msgMatrixIndependent.html',
+         title: "header doesn't depend on the system if `procTime` isn't set",
+         URL: 'area://Ru.Blog.Mithgol?msgid=2:50/88+5731ecd5',
+         message: 'msgMatrix.txt'
       }
    ].forEach(nextTestSet => it(nextTestSet.title, () => {
       var settings = JSON.parse(fs.readFileSync(

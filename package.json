@@ -1,7 +1,7 @@
 {
 "name": "efgh",
 "main": "efgh.js",
-"version": "0.3.0",
+"version": "0.4.0",
 "description": "Echomail in Fidonet: generator of headers.",
 "keywords": ["Fidonet", "FTN", "echomail", "header", "headers"],
 "author": { "name": "Mithgol the Webmaster" },

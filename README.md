@@ -49,6 +49,7 @@ An object of settings has the following fields:
 * `origTime` — the time when the message was written. Either a string or an array of year, month, day, hour, minute, second.
 
 * `procTime` — the time when the message was processed by an echoprocessor. Either a string or an array of year, month, day, hour, minute, second.
+   * This setting is optional. You may decide to pass an `undefined` value if you prefer the headers of the same Fidonet message to be exactly the same on different Fidonet systems (i.e. to not depend on the processing's time). For example, it helps to prevent redundant copies of the message in a global content-addressable storage (such as [IPFS](https://ipfs.io/)).
 
 * `subj` — the message's subject line.
 

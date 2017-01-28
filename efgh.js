@@ -57,10 +57,15 @@ var TheSynchronousInterface = settings => {
       '</tr>',
       '<tr>',
          '<th class="inverse">To</th>',
-         '<td>' + escapeHTML(options.to) + '</td>',
-         // decoded.toAddr is traditionally ignored outside of netmail:
-         '<td></td>', //'<td>' + (decoded.toAddr ||'') + '</td>',
-         '<td width=1><nobr>' + options.procTime + '</nobr></td>',
+         (
+            typeof options.procTime === 'undefined'
+         ) ? '<td colspan=3>' : '<td colspan=2>',
+         escapeHTML(options.to) + '</td>',
+         (
+            typeof options.procTime === 'undefined'
+         ) ? '' : (
+            '<td width=1><nobr>' + options.procTime + '</nobr></td>'
+         ),
       '</tr>',
       ( typeof options.URL === 'undefined' ) ? '' : [
          '<tr>',
