@@ -1,1 +1,1 @@
-HTML <code>code</code> sample.
+HTML <code>code</code> sample. HTML &lt;entities&gt; sample.
